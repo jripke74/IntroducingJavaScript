@@ -1,7 +1,7 @@
 // define variables
 var game;
 var player;
-var platform;
+var platforms;
 var badges;
 var items;
 var cursors;
@@ -13,15 +13,23 @@ var currentScore = 0;
 var winningScore = 100;
 
 // add collectable item to the games
-fcntion addItems() {
+function addItems() {
     items = game.add.physicsGroup();
-    createItem(375, 300, 'coin');
+    createItem(100, 240, 'coin');
+    createItem(450, 140, 'coin');
+    createItem(400, 440, 'coin');
+    createItem(100, 40, 'coin');
+    createItem(500, 40, 'coin');
 }
 
 // add platforms to the game
 function addPlatforms() {
     platforms = game.add.physicsGroup();
-    platforms.create(450, 150, 'platform');
+    platforms.create(100, 100, 'platform');
+    platforms.create(450, 200, 'platform');
+    platforms.create(400, 500, 'platform');
+    platforms.create(100, 300, 'platform');
+    platforms.create(500, 100, 'platform');
     platforms.setAll('body.immovable', true);
 }
 
@@ -55,9 +63,9 @@ function badgeHandler(player, badge) {
     won = true;
 }
 
-// setup game when the wep page loads
+// setup game when the web page loads
 window.onload = function() {
-    game = new Phaser.game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+    game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
     
     // before the game begins
     function preload() {
@@ -67,9 +75,9 @@ window.onload = function() {
         game.load.image('platform', 'platform_1.png');
         
         // Load spritesheets
-        game.load.spritesheets('player', 'chalker.png', 48, 62);
-        game.load.spritesheets('coin', 'coin.png', 36, 44);
-        game.load.spritesheets('badge', 'badge.png', 42, 54);
+        game.load.spritesheet('player', 'chalkers.png', 48, 62);
+        game.load.spritesheet('coin', 'coin.png', 36, 44);
+        game.load.spritesheet('badge', 'badge.png', 42, 54);
     }
     
     // initial game set up

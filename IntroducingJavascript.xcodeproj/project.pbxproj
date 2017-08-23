@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		89C41D8A1F4D0A8E009C96ED /* phaser.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = phaser.js; sourceTree = "<group>"; };
 		89C72E8B1F4CF4370099CD88 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		89C72E8D1F4CF50B0099CD88 /* main.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = main.css; path = css/main.css; sourceTree = "<group>"; };
 		89C72E8E1F4CF7600099CD88 /* game.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = game.js; sourceTree = "<group>"; };
@@ -19,6 +20,7 @@
 				89C72E8E1F4CF7600099CD88 /* game.js */,
 				89C72E8D1F4CF50B0099CD88 /* main.css */,
 				89C72E8B1F4CF4370099CD88 /* index.html */,
+				89C41D8A1F4D0A8E009C96ED /* phaser.js */,
 			);
 			sourceTree = "<group>";
 		};
