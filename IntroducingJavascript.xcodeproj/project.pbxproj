@@ -9,12 +9,14 @@
 /* Begin PBXFileReference section */
 		89C72E8B1F4CF4370099CD88 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		89C72E8D1F4CF50B0099CD88 /* main.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = main.css; path = css/main.css; sourceTree = "<group>"; };
+		89C72E8E1F4CF7600099CD88 /* game.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = game.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		89C72E841F4CF3ED0099CD88 = {
 			isa = PBXGroup;
 			children = (
+				89C72E8E1F4CF7600099CD88 /* game.js */,
 				89C72E8D1F4CF50B0099CD88 /* main.css */,
 				89C72E8B1F4CF4370099CD88 /* index.html */,
 			);
