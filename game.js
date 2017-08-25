@@ -15,21 +15,22 @@ var winningScore = 100;
 // add collectable item to the games
 function addItems() {
     items = game.add.physicsGroup();
-    createItem(100, 240, 'coin');
-    createItem(450, 140, 'coin');
-    createItem(400, 440, 'coin');
-    createItem(100, 40, 'coin');
-    createItem(500, 40, 'coin');
+    createItem(100, 550, 'star');
+    createItem(450, 550, 'star');
+    createItem(400, 550, 'coin');
+    createItem(100, 550, 'star');
+    createItem(500, 550, 'poison');
 }
 
 // add platforms to the game
 function addPlatforms() {
     platforms = game.add.physicsGroup();
     platforms.create(100, 100, 'platform');
-    platforms.create(450, 200, 'platform');
+    platforms.create(450, 200, 'platform2');
     platforms.create(400, 500, 'platform');
-    platforms.create(100, 300, 'platform');
+    platforms.create(100, 300, 'platform2');
     platforms.create(500, 100, 'platform');
+    platforms.create(20, 50, 'platform2');
     platforms.setAll('body.immovable', true);
 }
 
@@ -51,7 +52,15 @@ function createBadge() {
 // when the player collects and itemon the screen
 function itemHandler(player, item) {
     item.kill();
-    currentScore = currentScore + 10;
+    if (item.key === 'coin') {
+        currentScore = currentScore + 10;
+    } else if (item.key === 'poison') {
+        currentScore = currentScore - 5;
+    } else if (item.key === 'star') {
+        currentScore = currentScore + 15;
+    }
+    
+    
     if (currentScore === winningScore) {
         createBadge();
     }
@@ -73,10 +82,13 @@ window.onload = function() {
         
         // Load imagegs
         game.load.image('platform', 'platform_1.png');
+        game.load.image('platform2', 'platform_2.png');
         
         // Load spritesheets
         game.load.spritesheet('player', 'chalkers.png', 48, 62);
         game.load.spritesheet('coin', 'coin.png', 36, 44);
+        game.load.spritesheet('star', 'star.png', 32, 32);
+        game.load.spritesheet('poison', 'poison.png', 32, 32);
         game.load.spritesheet('badge', 'badge.png', 42, 54);
     }
     
